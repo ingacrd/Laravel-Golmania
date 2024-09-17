@@ -13,10 +13,17 @@ return new class extends Migration
     {
         Schema::create('fixtures', function(Blueprint $table) {
             $table->id();
+            $table->string('fixtureId');
             $table->string('date');
             $table->string('time');
-            $table->string('place');
-            $table->string('city');
+            $table->string('place')->nullable();
+            $table->string('city')->nullable();
+            $table->string('teams_home_name');
+            $table->string('teams_home_logo');
+            $table->string('teams_home_goals')->nullable();
+            $table->string('teams_away_name');
+            $table->string('teams_away_logo');
+            $table->string('teams_away_goals')->nullable();
             $table->timestamps();
         });
     }
