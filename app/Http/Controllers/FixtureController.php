@@ -65,7 +65,12 @@ class FixtureController extends Controller
             }        
         }
 
-        return response()->json(['updatedFixtures' => $updatedFixtures]);
+        $allFixtures = Fixture::all();
+
+        return response()->json([
+            'updatedFixtures' => $updatedFixtures,
+            'allFixtures' => $allFixtures
+        ]);
     } 
     
     private function fetchAndStoreFixtures() {
