@@ -11,7 +11,7 @@ class FixtureService
 
     public function __construct()
     {
-        $this->apiKey = env('API_KEY'); 
+        $this->apiKey = env('FOOTBALL_API_KEY'); 
         $this->apiHost = 'v3.football.api-sports.io';
     }
 
